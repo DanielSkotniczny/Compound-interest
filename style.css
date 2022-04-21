@@ -1,0 +1,148 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	color: #ddd;
+}
+
+.calc {
+	position: relative;
+	width: 100%;
+	background-image: url('https://wallpaperaccess.com/full/333537.jpg');
+	background-size: cover;
+	padding: 0.5em 1em;
+	z-index: 0;
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.hero-shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.83);
+	z-index: -10;
+	overflow: hidden;
+}
+
+.hero-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.heading {
+	font-size: 3.5rem;
+	padding-top: 1em;
+	text-align: center;
+}
+
+.hr {
+	height: 2px;
+	background-color: yellow;
+	width: 50%;
+	border-radius: 3px;
+}
+
+label {
+	font-size: 2.2rem;
+	margin-top: 1em;
+}
+
+input {
+	width: 60%;
+	min-height: 2em;
+	margin-top: 0.5em;
+	padding: 0.2em;
+	text-align: center;
+	border: none;
+	outline-style: none;
+	transition: border 0.3s;
+}
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1em;
+}
+
+.btn {
+	margin: 1em;
+	font-size: 1.5em;
+	padding: 0.5em 1em;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 3px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.calculate {
+	background-color: rgb(12, 169, 231);
+}
+
+.reset {
+	background-color: rgb(214, 28, 28);
+}
+
+.result {
+	padding: 0.5em 1em;
+	margin-bottom: 3em;
+	color: #fff;
+	font-size: 2.2rem;
+}
+
+input:focus {
+	border: 3px solid rgb(29, 199, 29);
+}
+
+.new-style {
+	font-style: italic;
+	color: yellow;
+	font-weight: bold;
+}
+
+/* media */
+
+@media (min-width: 768px) {
+	.heading {
+		font-size: 10rem;
+	}
+
+	label {
+		font-size: 4rem;
+	}
+
+	input {
+		font-size: 2.5em;
+	}
+
+	.btn {
+		margin: 1em;
+		padding: 0.5em 1em;
+		font-size: 3em;
+	}
+
+	.result {
+		font-size: 3rem;
+		margin-bottom: 5em;
+	}
+}
