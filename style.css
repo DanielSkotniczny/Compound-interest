@@ -15,30 +15,6 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	overflow: hidden;
-	color: #ddd;
-}
-
-.calc {
-	position: relative;
-	width: 100%;
-	background-image: url('https://wallpaperaccess.com/full/333537.jpg');
-	background-size: cover;
-	padding: 0.5em 1em;
-	z-index: 0;
-	overflow: hidden;
-	border-radius: 8px;
-}
-
-.hero-shadow {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background-color: rgba(0, 0, 0, 0.83);
-	z-index: -10;
-	overflow: hidden;
 }
 
 .hero-text {
@@ -50,13 +26,12 @@ body {
 
 .heading {
 	font-size: 3.5rem;
-	padding-top: 1em;
 	text-align: center;
 }
 
 .hr {
 	height: 2px;
-	background-color: yellow;
+	background-color: rgb(236, 240, 10);
 	width: 50%;
 	border-radius: 3px;
 }
@@ -64,6 +39,7 @@ body {
 label {
 	font-size: 2.2rem;
 	margin-top: 1em;
+	color: #000;
 }
 
 input {
@@ -74,7 +50,7 @@ input {
 	text-align: center;
 	border: none;
 	outline-style: none;
-	transition: border 0.3s;
+	transition: border 0.5s, background-color 0.5s;
 }
 
 .buttons {
@@ -89,8 +65,8 @@ input {
 	font-size: 1.5em;
 	padding: 0.5em 1em;
 	text-transform: uppercase;
-	border: none;
 	border-radius: 3px;
+	border: 1px solid transparent;
 	color: #fff;
 	cursor: pointer;
 	letter-spacing: 2px;
@@ -98,39 +74,69 @@ input {
 
 .calculate {
 	background-color: rgb(12, 169, 231);
+	transition: color 0.3s;
+}
+
+.calculate:hover {
+	color: rgb(0, 0, 0);
 }
 
 .reset {
 	background-color: rgb(214, 28, 28);
+	transition: color 0.3s;
+}
+
+.reset:hover {
+	color: rgb(236, 240, 10);
 }
 
 .result {
 	padding: 0.5em 1em;
-	margin-bottom: 3em;
+	margin-bottom: 1em;
 	color: #fff;
-	font-size: 2.2rem;
-}
-
-input:focus {
-	border: 3px solid rgb(29, 199, 29);
+	font-size: 2rem;
 }
 
 .new-style {
 	font-style: italic;
-	color: yellow;
 	font-weight: bold;
+	color: #000;
 }
 
 /* media */
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
 	.heading {
-		padding-top: 1.5em;
-		font-size: 10rem;
+		font-size: 6rem;
 	}
 
 	label {
-		font-size: 4rem;
+		font-size: 3rem;
+	}
+
+	input {
+		font-size: 2.2em;
+	}
+
+	.btn {
+		margin: 1em;
+		padding: 0.5em 1em;
+		font-size: 2.8em;
+	}
+
+	.result {
+		font-size: 2.6rem;
+		margin-bottom: 2em;
+	}
+}
+
+@media (min-width: 768px) {
+	.heading {
+		font-size: 7rem;
+	}
+
+	label {
+		font-size: 3.2rem;
 	}
 
 	input {
@@ -144,7 +150,7 @@ input:focus {
 	}
 
 	.result {
-		font-size: 3rem;
-		margin-bottom: 5em;
+		font-size: 2.8rem;
+		margin-bottom: 2em;
 	}
 }
