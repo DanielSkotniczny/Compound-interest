@@ -93,6 +93,7 @@ input {
 	border-radius: 3px;
 	color: #fff;
 	cursor: pointer;
+	letter-spacing: 2px;
 }
 
 .calculate {
